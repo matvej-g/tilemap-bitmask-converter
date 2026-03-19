@@ -12,13 +12,13 @@
   tilemap. Note that you will need to adapt your masking logic to match the converted layout.
 
   ## Conversion Layout
-
+```
   Input:              Output:
   01 02 03 04    →    13 14 01 04
   05 06 07 08    →    09 02 15 06
   09 10 11 12    →    16 05 12 03
   13 14 15 16    →    10 08 11 07
-     
+```
   ![input](tile_map_example/dual_grid_grass.png) => ![output](tile_map_example/dual_grid_grass_mask.png)
 
   ## Usage
