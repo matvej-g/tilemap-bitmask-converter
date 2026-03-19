@@ -20,7 +20,7 @@ Input:              Output:
 13 14 15 16    →    10 08 11 07
 ```
 
-Layout_example:
+Layout_example: <br>
 <img src="tile_map_example/dual_grid_temp.png" width="300"> => <img src="tile_map_example/dual_grid_temp_mask.png" width="300">
 
 <img src="tile_map_example/dual_grid_grass.png" width="300"> => <img src="tile_map_example/dual_grid_grass_mask.png" width="300">
