@@ -1,0 +1,34 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: gcc main.c -lm -o tilemap_converter
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: tilemap_converter
+
+  build-mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: gcc main.c -lm -o tilemap_converter_mac
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: tilemap_converter_mac
+
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: gcc main.c -lm -o tilemap_converter.exe
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: tilemap_converter.exe
